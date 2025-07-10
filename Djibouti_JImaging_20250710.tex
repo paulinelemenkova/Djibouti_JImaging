@@ -354,7 +354,7 @@ ID & Landsat 8-9 OLI/TIRS Land Cover Class & FAO LCCS Codes  \\
         5 & Bushes and Shrubs & 11490 // 11494 \\ \midrule
         6 & \makecell{Farmland, Shrubcrops and \\Irrigated Trees} & \makecell{11499 // 11500 // 30001, \\11491, 11495}  \\ \midrule
         7 & Built-up Areas, Artificial Surfaces and Associated Areas & 0010  \\ \midrule
-        8 &Broadleaved Semidecidous Forest // Woodland & \makecell{21496 // 21497-15048 // \\21496-121340 // 21497-129401} \\  \midrule
+        8 & Broadleaved Semidecidous Forest // Woodland & \makecell{21496 // 21497-15048 // \\21496-121340 // 21497-129401} \\  \midrule
         9 & Mosaic Cropland (Cultivated Areas) & 0003-0004 \\ \midrule
         10 & Sparse Vegetation & 20049, 20056 20058  \\
 \bottomrule
@@ -364,13 +364,14 @@ ID & Landsat 8-9 OLI/TIRS Land Cover Class & FAO LCCS Codes  \\
 
 \hl{The reclassified }image was generated for each year using ‘r.reclass’ module of GRASS GIS \hl{and} ‘echo’ Unix command.\hl{ }The raster map was reclassified based on the category values and new raster maps for years 2015, 2019, 2021 and 2023 were \hl{generated}. The category values of the reclassified maps are based on a reclassification of the categories in the existing raster maps using the information generated in 'landusereclass.txt' file. The categories were checked for control using the ‘r.category’ module. The maps were then visualised using the combination of modules using the ‘d.mon’ and ‘g.region’.  The color palette was assigned to the images using existing color tables.\hl{Afterwards, }the files were displayed using the combination of ‘d.rast’ and ‘d.vect’ for raster and vector files. \hl{Finally, }the cartographic grid was added \hl{and} the legends were added by the ‘d.legend’.
 
-The reclassification was performed since water surfaces in the Bab-el-Mandeb Strait and southern Red Sea had different colours. Nevertheless they belong to the same class of water. The differences in the coastal regions were smooth at the time of image acquisition and appear as dark colours in all images. \hl{With each iteration, the values of the means shift change into a higher percentage of pixels within each cluster. This is illustrated in the class separability matrix which shows the distinction between the categories, Figure} \ref{figSep1} \hl{and Figure} \ref{figSep2}, Appendix \ref{AppC}. \hl{Because mean values will never become totally static, a percent convergence and a maximum number of iterations are defined to finalise the process of classification before the maximum number of cycles of reclassification. The final values of the computed class means for each land cover classes in the study area are reported in Appendix} \ref{AppD}. \hl{After maximum number of reclassification cycles is reached, the optimal percent convergence is achieved. This is done through the increased number of iterations during the 'i.cluster' procedure and reclassification. Here, the number of reclassification cycles  depends on the complexity of the terrain and pattern of land cover types.} 
+The reclassification was performed since water surfaces in the Bab-el-Mandeb Strait and southern Red Sea had different colours. Nevertheless they belong to the same class of water. The differences in the coastal regions were smooth at the time of image acquisition and appear as dark colours in all images. \hl{With each iteration, the values of the means shift change into a higher percentage of pixels within each cluster. This is illustrated in the class separability matrix which shows the distinction between the categories, Figure} \ref{figSep1} \hl{and Figure} \ref{figSep2}, Appendix \ref{AppC}. \hl{As means never become totally static, a \% convergence and a maximum number of iterations are defined to finalise the process of reclassification before the maximum number of cycles. The final values of the computed class means for each land category are reported in Appendix} \ref{AppD}. \hl{After maximum number of reclassification cycles is reached, the optimal \% convergence is achieved through the increased number of iterations during the 'i.cluster' procedure. Here, the number of cycles depends on the complexity of the terrain and land cover patterns.} 
 
 %\pagebreak
 %----------- section ----------->
 \section{Results and Discussion}
 
-\hl{The results of the classified }satellite images covering Djibouti on different dates are \hl{presented in Figure} \ref{fig04}. \hl{The} traditional (maximal likelihood) and ML\hl{ }classification maps are compared \hl{for} 2015, 2019, 2021 and 2023. Comparing changes on classified images from different dates shows the dynamics of the landscapes over Djibouti from 2015 until 2023. The\hl{ }differences between the\hl{ }land cover or land use types are presented in Figures \ref{fig04}, \ref{fig06} and \ref{fig07} where Figure \ref{fig04} shows the results of the classification made using 'Maximal Likelihood' approach, Figure \ref{fig05} shows the accuracy assessment, Figure \ref{fig06} shows the reclassified maps and Figure \ref{fig07} shows the results of the classification performed using ML approach. 
+\subsection{Land cover change analysis}
+\hl{The results of the classified }satellite images are \hl{presented in Figure} \ref{fig04}.
 
  \begin{figure}[H]
     \begin{center}
@@ -379,6 +380,12 @@ The reclassification was performed since water surfaces in the Bab-el-Mandeb Str
     \caption{Maps of land cover types based on the classified Landsat 8 OLI/TIRS images on 2015, 2019, 2021 and 2023 covering Djibouti. The approach is done by the Maximum Likelihood discriminant analysis classifier. Background relief: GEBCO. Software: GRASS GIS. Mapping source: author.}
     \label{fig04}
 \end{figure}
+
+\hl{The entire study are covered by Landsat images was categorised into 10 distinct land cover classes following FAO classification scheme: 1) Salt plains and hardpans; 2) Barren Land; 3) Water Bodies; 4) Mangroves and aquatic vegetation on regularly flooded (temporarily or permanently) fresh or brackish water; 5) Bushes and Shrubs; 6) Farmland, Shrub crops and Irrigated Trees; 7) Built-up Areas, Artificial Surfaces and Associated Areas; 8) Broadleaved Semi-decidous Forest and Woodland; 9) Mosaic Cropland in Cultivated Areas; 10: Sparse Vegetation in desert areas. Among these classes, the following categories included sub-clusters: Water bodies comprised ponds, areas covered by marshes, rivers and estuaries, and coastal waterways, bushland and shrubland included non-classified types of vegetation such as grasslands, shrubs, rangelands, and savannah; coastal areas of the saline Lake of Assal was categories by salt-tolerant vegetation and mangroves.}
+
+\hl{Over the estimated period of within a decade, from 2015 to 2013, the image analysis revealed certain changes in land cover types across the study area of Djibouti. Thus, it is noteworthy that the amount of mangroves along the coastal areas decreased slightly, shrinking by 0.35 km\textsuperscript{2} from 6.28 km\textsuperscript{2} to 5.93 km\textsuperscript{2} during this period. Furthermore, a large area of 1392 km\textsuperscript{2} that had previously been covered by bushes and shrubland was converted into other land use categories, resulting in a decrease in coverage from 1194 km\textsuperscript{2}. As a result of this reduction, the percentage of bush cover decreased on 15\%.}
+
+\hl{The} traditional (maximal likelihood) and ML\hl{ }classification maps are compared \hl{for} 2015, 2019, 2021 and 2023. Comparing changes on classified images from different dates shows the dynamics of the landscapes over Djibouti from 2015 until 2023. The\hl{ }differences between the\hl{ }land cover or land use types are presented in Figures \ref{fig04}, \ref{fig06} and \ref{fig07} where Figure \ref{fig04} shows the results of the classification made using 'Maximal Likelihood' approach, Figure \ref{fig05} shows the accuracy assessment, Figure \ref{fig06} shows the reclassified maps and Figure \ref{fig07} shows the results of the classification performed using ML approach. 
 
 Additionally, the salines mixed with the fresh waters of the estuaries of the Gulf of Tadjoura have lighter colors than those of the open sea water. Vegetation types such as mosaic croplands, sparse vegetation, xeric shrubland and grassland or bare soil areas are detected and indicated on the maps. The broadleaved deciduous vegetation is relatively scarce in the study area. The regions of scrub, and flooded brackish water areas are mostly occupy mangrove forests which have stronger spectral signals and appear as various shades of colors. The computational results of the pixels by land cover classes are summarised in Table \ref{tab04}.
 
@@ -399,7 +406,34 @@ Additionally, the salines mixed with the fresh waters of the estuaries of the Gu
 
 \subsection{Uncertainties and sources of error}
 
-\hl{Understanding possible uncertainties underlying the classification schemes in RS data processing is imperative. }Accurate vegetation mapping using satellite image classification is not easy to achieve due to the spectral confusion between different vegetation types and\hl{ }similarity in spectral reflectance of various plant species \cite{1370179,Dobrowski,Moore,8688643}. Additionally, the data are not normally distributed in most cases. \hl{Moreover, }the light signature of the deciduous broadleaved plants enables to detect occasionally growing plants in the central regions of the country on the mountainous slopes where precipitation is higher than in semi-desert areas. \hl{Thus}, deciduous shrubland in all the images is attributed to the high backscatter coefficients of this vegetation type and spectral reflection effects.
+\hl{Understanding possible uncertainties underlying the classification schemes in RS data processing is imperative. }Accurate vegetation mapping using satellite image classification is not easy to achieve due to the spectral confusion between different vegetation types and\hl{ }similarity in spectral reflectance of various plant species \cite{1370179,Dobrowski,Moore,8688643}. \hl{Therefore, accuracy assessment is a crucial step to the evaluation process. In this case, the generated map was compared to the ground truth values, represented in this case by sample points taken from FAO based map. The overall accuracy (OA) and Kappa coefficient were computed to evaluate the classified map's accuracy by measuring the similarity between the sample points and the correctly and incorrectly categorised classes, Table} \ref{tabKappa}. 
+
+\begin{table}[H]
+\caption{\hl{Error matrix for validation of gradient boosting ML algorithm for land land cover categories}}
+\label{tabKappa}
+\begin{tabularx}{\textwidth}{ p{0.6cm}  X  X  X  X  X  X  X  X  X  X  p{0.6cm} }
+  \toprule
+  Class & \rotatebox{90}{Salt plains} & \rotatebox{90}{\makecell{Barren \\Land}} & \rotatebox{90}{\makecell{Water\\ Bodies}} & \rotatebox{90}{Mangroves} & \rotatebox{90}{Shrubs} & \rotatebox{90}{Farmland} & \rotatebox{90}{\makecell{Built-up \\Areas}} & \rotatebox{90}{Forest} & \rotatebox{90}{Cropland}  & \rotatebox{90}{\makecell{Sparse \\Vegegation}} & \rotatebox{90}{Total} \\
+   \midrule
+    {1} & {3503} & 12 & 4 & 7 & 31 & 4 & 29 & 2 & 9 & 21 & 3622\\  
+    {2} & 1 & {1651} & 43 & 4 & 5 & 0 & 8 & 12 & 0 & 2 & 1726  \\
+    {3} & 0 & 1 & {1018} & 21 & 0 & 8 & 15 & 4 & 2 & 12 & 1081  \\  
+    {4} & 2 & 3 & 14 & {945} & 1 & 0 & 38 & 51 & 27 & 12 & 1093  \\ 
+    {5} & 3 & 18 & 256 & 12 & {2751} & 12 & 48 & 35 & 0 & 0 & 3135 \\
+    {6} & 22 & 16 & 39 & 0 & 2 & {546} & 5 & 8 & 31 & 83 & 752  \\
+     {7} & 2 & 6 & 10 & 1 & 12 & 14 & {1132} & 44 & 6 & 13 & 1240  \\
+     {8} & 1 & 1 & 0 & 204 & 37 & 52 & 0 & {1439} & 2 & 0 & 1736 \\
+     {9} & 3 & 12 & 2 & 62 & 14 & 6 & 0 & 45 & {1968} & 0 & 2033 \\
+     {10} & 14 & 2 & 0 & 16 & 83 & 12 & 0 & 26 & 0 & {2382} & 2535 \\ 
+     \midrule 
+     {} & \multicolumn{11}{c}{Overall Accuracy (OA) = 93.4\%} \\ 
+     \midrule
+     {} &\multicolumn{11}{c}{Kappa Coefficient (KC) = 87.5\%} \\ 
+    \bottomrule
+\end{tabularx}
+\end{table}
+
+Additionally, the \hl{sources of errors in automatic classification are caused by the individual patterns of land cover categories on Earth: the }data are not normally distributed in most cases. \hl{Moreover, }the light signature of the deciduous broadleaved plants enables to detect occasionally growing plants in the central regions of the country on the mountainous slopes where precipitation is higher than in semi-desert areas. \hl{Thus}, deciduous shrubland in all the images is attributed to the high backscatter coefficients of this vegetation type and spectral reflection effects. Therefore, validation using the computed Kappa coefficient was done and reported in Table \ref{tabKappa}
 
  \begin{figure}[H]
     \begin{center}
@@ -427,6 +461,8 @@ The reclassified images are shown in Figure \ref{fig06}. Here, the areas of wate
 
 Landscape change detection based on satellite images is a technique of GRASS GIS software. This method performs a comparison between the land cover types detected on the ML-based classified satellite images obtained on different dates. the classification of the images is based on automated evaluation of the spectral reflectance values of the individual pixels on the images which are assigned to different land cover classes. Then, the comparative analysis of classified images makes it possible to detect landscape changes. The main cover class transitions observed were the loss of intact vegetation areas and fluctuations in the saline lake of Assal with corresponding gains in vegetation areas in the coastal areas such as secondary vegetation growth. These transitions correspond to the predominant patterns of vegetation response to climate warming and growth annual temperatures which are visible when comparing central and coastal regions of Djibouti where latter ones have influence from the marine climate especially in the coastal areas of the Gulf of Tadjoura.
 
+Xeric shrubland and sparse deciduous forests typical for Djibouti and located along the coasts of Red Sea or Gulf of Tadjoura appeared dark green because their signatures differ from those of mosaic vegetation, e.g., semi-deciduous forests or sparse lands in inland regions of the country on the border with Ethiopia and Eritrea. They appear greenish and stand out from other land cover types. Very thin coastal region covered with mangrove plants along the coasts of the Bab-el-Mandeb Strait present the wetlands partially submerged in water. This kind of vegetation shows no much difference compared to the salt areas of the Lake of Assal which experience significant changes. 
+
  \begin{figure}[H]
     \begin{center}
 	\hspace{-35pt}\includegraphics[width=14.0cm]{Fig_07.jpg}
@@ -434,8 +470,6 @@ Landscape change detection based on satellite images is a technique of GRASS GIS
     \caption{Image classification based on the Gradient boosting classifier algorithm of ML applied for Landsat scenes covering Djibouti on 205, 2019, 2021 and 2023. Background relief: GEBCO. Software: GRASS GIS. Mapping source: author.}
     \label{fig07}
 \end{figure}
-
-Xeric shrubland and sparse deciduous forests typical for Djibouti and located along the coasts of Red Sea or Gulf of Tadjoura appeared dark green because their signatures differ from those of mosaic vegetation, e.g., semi-deciduous forests or sparse lands in inland regions of the country on the border with Ethiopia and Eritrea. They appear greenish and stand out from other land cover types. Very thin coastal region covered with mangrove plants along the coasts of the Bab-el-Mandeb Strait present the wetlands partially submerged in water. This kind of vegetation shows no much difference compared to the salt areas of the Lake of Assal which experience significant changes. 
 
 Comparison of the classified maps, revealed that the cover of natural vegetation, such as herbaceous vegetation and mosaic shrubland, croplands and grassland has decreased while the sparse vegetation and bare soil areas typical for desert and semi-desert areas of Djibouti have increased. Based on the GRASS GIS method, changes in land cover types in the coastal region of Bab-el-Mandeb and central Djibouti were detected and visualized in the target landscapes over the period from 2015 to 2023. Specifically, the images were compared to different dates to assess landscape dynamics which is defined by evaluation of land cover types through the identification of various land cover patches in different regions of Djibouti.
 
@@ -479,6 +513,7 @@ GRASS GIS & Geographic Resources Analysis Support System GIS \\
 \hl{LCCS} & \hl{Land Cover Classification System} \\
 Landsat OLI/TIRS & \makecell{Landsat Operational Land Imager (OLI) and\\ Thermal Infrared Sensor (TIRS)} \\
 ML & Machine Learning \\
+\hl{OA} & \hl{Overall Accuracy} \\
 \hl{QGIS} & \hl{Quantum Geographic Information System} \\
 \hl{RF} & \hl{Random Forest} \\
 RS & Remote Sensing \\
