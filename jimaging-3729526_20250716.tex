@@ -141,14 +141,12 @@ $^{1}$ \quad Alma Mater Studiorum -- Università di Bologna, Department of Biolo
 
 Important application of \hl{EO} data for environmental monitoring consists in time series analysis. Such techniques are based on the comparison of changes visible of several multi-temporal images to evaluate trends in vegetation coverage during a given temporal period \cite{Springer2023,10281679}. {This enables to detect land cover changes and} identify {landscape} dynamics \cite{su13084092,NATARAJAN2016256}. The EO data processing requires advanced techniques that enable to find optimal and time-efficient solutions for solving complex geospatial tasks in image analysis. While traditional methods \hl{of Geographical Information Systems (GIS) }have limitations, programming algorithms have significant benefits in time series analysis of satellite images.
 
-Technologies in {image analysis} play the essential role in development {of the environmental monitoring}. {Traditional tools of processing RS data reply on} using {the} \hl{GIS} {which enable to extract geospatial information from the satellite images} \cite{BORANA2023261,Zhu02012021}. {Recently, a} number of {the advanced} techniques have been developed for land cover change detection. {To mention a few of them,} image enhancement \cite{Dyson2024}, image differentiation, rationing or principal component analysis methods \cite{7877513} and {more}. However, to obtain detailed information on land cover changes {using time series analysis, automation} of image {analysis} is needed {due to large volumes of RS data}. 
-
- {Recent progress in Machine Learning (ML) methods increased the efficiency of such techniques through automated algorithms of image analysis. The application of ML} utilise training datasets as a seed for classification \cite{FERCHICHI2024122211}. {Existing ML algorithms include, for instance, Random Forest (RF)} \cite{Balha2022,Lemenkova202401}, {Support Vector Machines (SVM)} \cite{10450641}, {or Convolutional Neural Networks (CNN)} \cite{SUAREZFERNANDEZ2024}. Such {approaches are derived} from programming{ and effectively adapted to satellite image analysis}. Automated methods of ML are increasingly needed for spatial data analysis in diverse domains of Earth and climate sciences \cite{HUANG2020104580,Arabameri}. Examples of such techniques include automated heuristic clustering \cite{8524429,10615674,669164,4666175}, flexible control of variables \cite{8999627}, optimised pattern recognition \cite{9708387,1634653}, ensemble learning \cite{10145147}, and objective analysis \cite{8938484,9279780}. 
+Technologies \hl{of} {image analysis} play the essential role in development {of the environmental monitoring}. {Traditional tools of processing RS data reply on} \hl{GIS} \cite{BORANA2023261,Zhu02012021}. However, \hl{in view of the large volumes of RS data, automation of image analysis is needed to effectively perform time series analysis and extract geoinformation}. \hl{Recent technical development has enabled novel methods for extracting geoinformation from spaceborne data, including} image enhancement \cite{Dyson2024}, image differentiation, rationing or principal component analysis \cite{7877513}. Machine Learning (ML) methods increased the efficiency of \hl{image analysis more} through automated algorithms. The application of ML utilise training \hl{data} as a seed for classification \cite{FERCHICHI2024122211}. \hl{Examples of} ML algorithms include\hl{ }Random Forest (RF) \cite{Balha2022,Lemenkova202401}, {Support Vector Machines (SVM)} \cite{10450641}, {Convolutional Neural Networks (CNN)} \cite{SUAREZFERNANDEZ2024}. Such approaches are derived from programming and  adapted to\hl{ }image analysis\hl{ }\cite{HUANG2020104580,Arabameri}. Examples of such techniques include heuristic clustering \cite{8524429,10615674,669164,4666175}, flexible control of variables \cite{8999627}, optimised pattern recognition \cite{9708387,1634653}, ensemble learning \cite{10145147}, and objective analysis \cite{8938484,9279780}. \hl{Following the existing applications of ML in Earth and climate sciences, }this study \hl{reports the case of novel independent reclassification scheme of image analysis at pixel-level using} ML using Geographic Resources Analysis Support System (GRASS) GIS. 
 
 %----------- section ----------->
 \subsection{Objectives and goals}
 
-{This study} presents an application of ML methods for image{ }classification using{ }Geographic Resources Analysis Support System (GRASS) GIS. {The ML algorithms} of GRASS GIS perform{ }automatic{, independent} pixel-level image classification{ }to objectively represent landscape dynamics. The main goal{ }is to{ identify} environmental { changes in land cover types }of Djibouti using { time series of }satellite images. {GRASS GIS is an advanced scripting cartographic and RS software with} powerful computational engine for geospatial processing \cite{NETELER2012124}. {Developed by the international GRASS developer community} \cite{grass_development_team_2025_14918754}, {it is used for processing cartographic data, maps, models and satellite image analysis across various applications in geoinformatics. Its important benefits consist in a built-in framework and Python Application Programming Interface (API) which supports automation of data processing through scripting.} To achieve this goal, the objective{ }is to map land cover changes in the coastal region of Djibouti{ }using RS data.{ }The{ }scripts are included and commented for{ }reference{. }The specific objectives of this research are as follows:
+The main goal{ }is to{ identify}{ changes in land cover types }of Djibouti using {time series of }satellite images \hl{by reclassification scheme}. {GRASS GIS is an advanced scripting cartographic and RS software with} powerful computational engine for geospatial processing \cite{NETELER2012124}. {Developed by the international GRASS developer community} \cite{grass_development_team_2025_14918754}, {it is used for processing cartographic data, maps, models and satellite image analysis across various applications in geoinformatics. Its important benefits consist in a built-in framework and Python Application Programming Interface (API) which supports automation of data processing through scripting.} To achieve this goal, the objective{ }is to map land cover changes in the coastal region of Djibouti{ }using RS data.{ }The{ }scripts are included and commented for{ }reference{. }The specific objectives of this research are as follows:
 
 \begin{enumerate}
 	\item to produce land cover maps based on{ }classification of {the }Landsat satellite images on {2015}, 2019, 2021 and 2023; 
@@ -441,9 +439,7 @@ Xeric shrubland and sparse deciduous forests typical for Djibouti {are} located 
      {9} & 3 & 12 & 2 & 62 & 14 & 6 & 0 & 45 & {1968} & 0 & 2033 \\
      {10} & 14 & 2 & 0 & 16 & 83 & 12 & 0 & 26 & 0 & {2382} & 2535 \\ 
      \midrule 
-     {} & \multicolumn{11}{c}{\hl{OA} = 93.4\%} \\ 
-     \midrule
-     {} &\multicolumn{11}{c}{\hl{KC} = 87.5\%} \\ 
+     {} & \multicolumn{11}{c}{\hl{OA} = 93.4\%; \hl{KC} = 87.5\%} \\ 
     \bottomrule
 \end{tabularx}
 \end{table}
@@ -519,7 +515,7 @@ The following abbreviations are used in this manuscript:\\
 
 \noindent 
 \begin{tabular}{@{}ll}
-Application Programming Interface & API \\
+\hl{API} & \hl{Application Programming Interface} \\
 {CNN} & {Convolutional Neural Networks} \\
 EO & Earth observation \\
 {FAO} & {Food and Agriculture Organization} \\
@@ -529,13 +525,14 @@ GMT & Generic Mapping Tools \\
 GRASS GIS & Geographic Resources Analysis Support System GIS \\
 \hl{KC} & \hl{Kappa coefficient} \\
 {LCCS} & {Land Cover Classification System} \\
-Landsat OLI/TIRS & \makecell{Landsat Operational Land Imager (OLI) and\\ Thermal Infrared Sensor (TIRS)} \\
+\hl{OLI} & \hl{Operational Land Imager} \\
 ML & Machine Learning \\
 {OA} & {Overall Accuracy} \\
 {QGIS} & {Quantum Geographic Information System} \\
 {RF} & {Random Forest} \\
 RS & Remote Sensing \\
 {SVM} & {Support Vector Machines} \\
+\hl{TIRS} & \hl{Thermal Infrared Sensor} \\
 TIFF & Tag Image File Format \\
 USGS & United States Geological Survey \\
 UTM & Universal Transverse Mercator \\
