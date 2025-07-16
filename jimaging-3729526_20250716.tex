@@ -137,11 +137,11 @@ $^{1}$ \quad Alma Mater Studiorum -- Università di Bologna, Department of Biolo
 
 \subsection{Background}
 
-{Satellite images play a pivotal role in environmental monitoring for reconstructing the} history of landscapes{ }{ }on the Earth. Understanding how land cover types change over time gives{ }insight into {the development of }human-environment interactions \cite{Ndehedehe2022,Foli,Speranza}. The main threat of environmental {changes are} linked to climate issues such as desertification, erosion, landscape fragmentation, coastal degradation {and} deforestation. Most of this information {can be discovered on space born images due to fundamental principle of RS -- difference in spectral reflectance of pixels corresponding to diverse objects on the Earth. Using such benefits of RS, many} environmental processes{ and phenomena can be recognised on the satellite images,} including, for instance, deforestation, soil erosion and desertification. 
+{Satellite images play a pivotal role in environmental monitoring for reconstructing the} history of landscapes{ }{ }on the Earth. Understanding how land cover types change over time gives{ }insight into {the development of }human-environment interactions \cite{Ndehedehe2022,Foli,Speranza}. The main threat of environmental {changes are} linked to climate issues such as desertification, erosion, landscape fragmentation, coastal degradation {and} deforestation. Most of this information {can be discovered on space born images due to fundamental principle of \hl{remote sensing (RS)} -- difference in spectral reflectance of pixels corresponding to diverse objects on the Earth. Using such benefits of RS, many} environmental processes and phenomena can be recognised on the satellite images \hl{and Earth Observation (EO) data}, including, for instance, deforestation, soil erosion and desertification. 
 
-{Important application of RS} data { for environmental monitoring consists in time series analysis. Such techniques is based on the comparison of changes visible of several multi-temporal images }to evaluate trends in vegetation coverage during a given temporal period \cite{Springer2023,10281679}. {This enables to detect land cover changes and} identify {landscape} dynamics \cite{su13084092,NATARAJAN2016256}. {RS data processing requires advanced techniques that enable to find optimal and time-efficient solutions for solving complex geospatial tasks in image analysis. While traditional GIS methods have limitations, programming algorithms have significant benefits in time series analysis of satellite images.}
+Important application of \hl{EO} data for environmental monitoring consists in time series analysis. Such techniques are based on the comparison of changes visible of several multi-temporal images to evaluate trends in vegetation coverage during a given temporal period \cite{Springer2023,10281679}. {This enables to detect land cover changes and} identify {landscape} dynamics \cite{su13084092,NATARAJAN2016256}. The EO data processing requires advanced techniques that enable to find optimal and time-efficient solutions for solving complex geospatial tasks in image analysis. While traditional methods \hl{of Geographical Information Systems (GIS) }have limitations, programming algorithms have significant benefits in time series analysis of satellite images.
 
-Technologies in {image analysis} play the essential role in development {of the environmental monitoring}. {Traditional tools of processing RS data reply on} using {the} Geographical Information Systems (GIS) {which enable to extract geospatial information from the satellite images} \cite{BORANA2023261,Zhu02012021}. {Recently, a} number of {the advanced} techniques have been developed for land cover change detection. {To mention a few of them,} image enhancement \cite{Dyson2024}, image differentiation, rationing or principal component analysis methods \cite{7877513} and {more}. However, to obtain detailed information on land cover changes {using time series analysis, automation} of image {analysis} is needed {due to large volumes of RS data}. 
+Technologies in {image analysis} play the essential role in development {of the environmental monitoring}. {Traditional tools of processing RS data reply on} using {the} \hl{GIS} {which enable to extract geospatial information from the satellite images} \cite{BORANA2023261,Zhu02012021}. {Recently, a} number of {the advanced} techniques have been developed for land cover change detection. {To mention a few of them,} image enhancement \cite{Dyson2024}, image differentiation, rationing or principal component analysis methods \cite{7877513} and {more}. However, to obtain detailed information on land cover changes {using time series analysis, automation} of image {analysis} is needed {due to large volumes of RS data}. 
 
  {Recent progress in Machine Learning (ML) methods increased the efficiency of such techniques through automated algorithms of image analysis. The application of ML} utilise training datasets as a seed for classification \cite{FERCHICHI2024122211}. {Existing ML algorithms include, for instance, Random Forest (RF)} \cite{Balha2022,Lemenkova202401}, {Support Vector Machines (SVM)} \cite{10450641}, {or Convolutional Neural Networks (CNN)} \cite{SUAREZFERNANDEZ2024}. Such {approaches are derived} from programming{ and effectively adapted to satellite image analysis}. Automated methods of ML are increasingly needed for spatial data analysis in diverse domains of Earth and climate sciences \cite{HUANG2020104580,Arabameri}. Examples of such techniques include automated heuristic clustering \cite{8524429,10615674,669164,4666175}, flexible control of variables \cite{8999627}, optimised pattern recognition \cite{9708387,1634653}, ensemble learning \cite{10145147}, and objective analysis \cite{8938484,9279780}. 
 
@@ -151,7 +151,7 @@ Technologies in {image analysis} play the essential role in development {of the 
 {This study} presents an application of ML methods for image{ }classification using{ }Geographic Resources Analysis Support System (GRASS) GIS. {The ML algorithms} of GRASS GIS perform{ }automatic{, independent} pixel-level image classification{ }to objectively represent landscape dynamics. The main goal{ }is to{ identify} environmental { changes in land cover types }of Djibouti using { time series of }satellite images. {GRASS GIS is an advanced scripting cartographic and RS software with} powerful computational engine for geospatial processing \cite{NETELER2012124}. {Developed by the international GRASS developer community} \cite{grass_development_team_2025_14918754}, {it is used for processing cartographic data, maps, models and satellite image analysis across various applications in geoinformatics. Its important benefits consist in a built-in framework and Python Application Programming Interface (API) which supports automation of data processing through scripting.} To achieve this goal, the objective{ }is to map land cover changes in the coastal region of Djibouti{ }using RS data.{ }The{ }scripts are included and commented for{ }reference{. }The specific objectives of this research are as follows:
 
 \begin{enumerate}
-	\item to produce land cover maps based on{ }classification of {the }Landsat OLI/TIRS satellite images on {2015}, 2019, 2021 and 2023; 
+	\item to produce land cover maps based on{ }classification of {the }Landsat satellite images on {2015}, 2019, 2021 and 2023; 
 	\item to quantify and visualise dynamic changes of land cover types {for identification of landscapes dynamics}; 
 	\item to assess the accuracy of{ }classification for vegetation mapping in{ }central and coastal zone {around} the Lake Assal. 
 \end{enumerate}
@@ -192,12 +192,12 @@ The eastern strip along the Red Sea coast is part of the Eritrean coastal desert
 %----------- section ----------->
 
 \section{Materials and Methods}
-This methodology presents a case of image reclassification and analysis using machine learning (ML) techniques{ }for environmental mapping in Djibouti, East Africa. The classification scheme consisting of 17 initial land cover classes was employed by logical sequence of GRASS GIS modules to extract land cover information of the study area in Djibouti. {Reclassification includes the sequence of changing the values in a raster dataset to new values. The process is based on a set of rules which defined the criteria of updates in classes. This operation in GRASS GIS was applied for simplification of land cover polygons, standardization of assignment of pixels to classes and preparing data for land cover analysis.}
+This methodology presents a case of image reclassification and analysis using \hl{ML} techniques{ }for environmental mapping in Djibouti, East Africa. The classification scheme consisting of 17 initial land cover classes was employed by logical sequence of GRASS GIS modules to extract land cover information of the study area in Djibouti. {Reclassification includes the sequence of changing the values in a raster dataset to new values. The process is based on a set of rules which defined the criteria of updates in classes. This operation in GRASS GIS was applied for simplification of land cover polygons, standardization of assignment of pixels to classes and preparing data for land cover analysis.}
 
 %----------- subsection ----------->
 \subsection{Data}
 
-The data used in this study include {four }Landsat 8-9 Landsat Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS) images:  the training image on 2015, {and images with biannual interval on }2019, 2021 and 2023, Figure \ref{fig03}. 
+The data used in this study include {four }Landsat 8-9 Landsat Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS) images: the training image on 2015, {and images with biannual interval on }2019, 2021 and 2023, Figure \ref{fig03}. 
 
 \begin{figure}[H]
     \begin{center}
@@ -209,7 +209,7 @@ The data used in this study include {four }Landsat 8-9 Landsat Operational Land 
 
 The {Landsat} images were selected as the data source due to {their} quality and {reliability}\cite{GONG2024149,ALLU2025127478,CHANUWANWIJESINGHE2024112681}. {Earlier studies reported the effective} use of {the} RS data {in environmental studies which proves their utility and value }\cite{WANG2023311,DAREM2023341,FAROOQ2024101168,AFUYE2024103262,CHUGHTAI2021100482,VELASTEGUIMONTOYA2023100659,FARHAN2024103689}. {Nowadays}, satellite images are {excellent} source of geospatial information {which} can be used {for mapping} arid regions{ }  \cite{AMAZIRH2023104586,FERCHICHI2024122211,MEKONNEN20251}. For example, satellite images are used to analyse land cover changes and deforestation in Africa's tropical forests, and{ report }landscape changes over time \cite{PARRAPAITAN2024103796,ZHAO2024506,NZABARINDA2025114849,MONTEROBOTEY2024e03068}. {Among other RS data, the} importance of Landsat 8-9 OLI/TIRS for environmental analysis has been described {earlier}\cite{AKSOY20221072,NESARI2024101989,KUMAR2022100578}.
 
-In this study, four Landsat images were used taken on the following dates: 1) 02 July 2015; 2) 23 July 2017; 3) 19 August 2021; and 4) 16 July 2023{ with} metadata{ }summarised in Table \ref{tab01}. The cloudiness percentage is less than 10\% for all the images. The{ }technical parameters of {the} scenes are provided in the Table \ref{tab02}. Common data for all four images are as follows: Datum and Ellipsoid is WGS84, Product Map Projection L1 is Universal Transverse Mercator (UTM) Zone is 38 for Djibouti;  Worldwide Reference System (WRS) Path -- 166, Row -- 52; Landsat Collection Number 2, Category T1, Station Identifier LGN, Sensor Identifier OLI/TIRS. The images were taken during day time in nadir with Roll Angle 1\degree  for image on 2015 and 0\degree for images on 2017, 2021 and 2023. 
+In this study, four Landsat images were used taken on the following dates: 1) 02 July 2015; 2) 23 July 2017; 3) 19 August 2021; and 4) 16 July 2023{ with} metadata{ }summarised in Table \ref{tab01}. The cloudiness percentage is less than 10\% for all the images. The{ }technical parameters of {the} scenes are provided in the Table \ref{tab02}. Common data for all four images are as follows: Datum and Ellipsoid is \hl{World Geodetic System 1984 (WGS84)}, Product Map Projection L1 is Universal Transverse Mercator (UTM) Zone is 38 for Djibouti;  Worldwide Reference System (WRS) Path -- 166, Row -- 52; Landsat Collection Number 2, Category T1, Station Identifier LGN, Sensor Identifier OLI/TIRS. The images were taken during day time in nadir with Roll Angle 1\degree  for image on 2015 and 0\degree for images on 2017, 2021 and 2023. 
 
 \begin{table}[H]
 \caption{Metadata and Identifiers (IDs) of the four multispectral Landsat 8-9 OLI/TIRS images covering study area of Djibouti}
@@ -268,6 +268,8 @@ The Image Quality is 9 for all the scenes, according to the Landsat specificatio
 %    \end{adjustwidth}
 \end{table}
 
+ The images have been filtered to reduce noise due to cloudiness and atmospheric effects. Images were systematically selected from the USGS EarthExplorer repository and taken at the end of the dry season. During this period, cloud cover is generally low but vegetation appears bright green and contrasts with all other land cover types. 
+
 \begin{table}[H]
 \caption{Metadata and Identifiers (IDs) of the four multispectral Landsat 8-9 OLI/TIRS images covering study area of Djibouti}\label{tab03}
 \setlength\tabcolsep{0pt}
@@ -281,20 +283,18 @@ The Image Quality is 9 for all the scenes, according to the Landsat specificatio
 \bottomrule
 \end{tabularx}
 \end{table}
- 
- The images have been filtered to reduce noise due to cloudiness and atmospheric effects. Images were systematically selected from the USGS EarthExplorer repository and taken at the end of the dry season. During this period, cloud cover is generally low but vegetation appears bright green and contrasts with all other land cover types. 
 
 %----------- subsection ----------->
 \subsection{Workflow}
 
-\hl{The schematic workflow of the research is presented in Figure} \ref{figDia}.
+\hl{The schematic workflow of the research is presented in Figure} \ref{fig04}.
  
 \begin{figure}[H]
     \begin{center}
-	\hspace{-35pt}\includegraphics[width=12.0cm]{Diagram_bw.jpg}
+	\hspace{-35pt}\includegraphics[width=13.0cm]{Fig_04.jpg}
     \end{center}
     \caption{Workflow scheme. Source: author.}
-    \label{figDia}
+    \label{fig04}
 \end{figure}
 
 The{ }image processing used to create a land cover map from Landsat OLI/TIRS imagery was carried out in six steps using \hl{the following techniques of} GRASS GIS: 
@@ -313,26 +313,26 @@ The{ }image processing used to create a land cover map from Landsat OLI/TIRS ima
 
 The Landsat 8-9 OLI/TIRS images were geometrically rectified according to EPSG coordinates: 2095, Universal Transverse Mercator (UTM) zone for Djibouti according to the USGS technical characteristics. In this study, a scripting method of GRASS GIS was applied which uses several modules with code snippets explained and commented below as follows. 
 
-First, the images were imported into the working folder using ‘r.import’ module,{ then }the same procedure was repeated for all the bands and four images used in this study (2015, 2019, 2021 and 2023). Afterwards, the relief map was imported from the GEBCO{. }The region was set up to the extent of the geospatial extent {with the} isolines{ }obtained{ }using ‘r.contour’ module{ }with 200 m interval{.} To facilitate data processing, the best combinations of Landsat bands were{ }stacked into {colour composites}. The bands that produced the best separation for pixels {were processed excluding} the panchromatic channels{. The} TIFF files were joined using the 'i.group' module {and enhanced using preprocessing steps which included} contrast stretching{ and }atmospheric correction. 
+First, the images were imported into the working folder using ‘r.import’ module,{ then }the same procedure was repeated for all the bands and four images used in this study (2015, 2019, 2021 and 2023). Afterwards, the relief map was imported from the GEBCO{. }The region was set up to the extent of the geospatial extent {with the} isolines{ }obtained{ }using ‘r.contour’ module{ }with 200 m interval{.} To facilitate data processing, the best combinations of Landsat bands were{ }stacked into {colour composites}. The bands that produced the best separation for pixels {were processed excluding} the panchromatic channels{. The} \hl{Tag Image File Format (TIFF)} files were joined using the 'i.group' module {and enhanced using preprocessing steps which included} contrast stretching{ and }atmospheric correction. 
 
 %----------- subsection ----------->
 \subsection{Clustering}
 
 The clustering was performed by ‘i.cluster’ module of GRASS GIS which generates a signature file and reports results using k-means clustering algorithm as explained in the existing approaches \cite{5930121,10430357,Lemenkova202315,5739741}.{ } Signature file determines the categories (classes) of land cover types{ }and contains{ }clusters and covariance matrices for each image using analysis of spectral reflectance of the pixels. {The initial means for each class before data processing reported in Appendix} \ref{AppA} {indicates the starting values of seed values of the multispectral band before iteration assigned according to the signature files. The means are calculated then during the 'i.cluster' procedure and recalculated following the principles of maximal class separation (the contrast between the classes) and minimal class size (the details of classification with respect to the spatial resolution of 30 m). The Table in Appendix} \ref{AppA} {reports such values for each of the 10 classes and seven multispectral bands of Landsat starting from 1 - 'Coastal aerosol' to 7 - 'SWIR-2'.} 
 
-{The} initial values of means for each land cover class by years 2015, 2017, 2021 and 2023 are reported in tables \ref{tabA1}, \ref{tabA2}, \ref{tabA3} and \ref{tabA4}, see Appendix \ref{AppA}. Afterwards, the assignment of pixels was performed during iterative process for each land cover class. The same was applied for all images for the years 2015, 2017, 2021 and 2023 with biannual gap. The classification was performed using the maximum-likelihood discriminant analysis classifier by the ‘i.maxlik’ module \cite{CHOWDHURY2024100800,Lemenkova202323}. {The algorithm used} the signature file{ }calculated in the previous step. {Using} signature file, the land cover types{ were classified }using the maximum-likelihood discriminant, Figure \ref{fig04}.
+{The} initial values of means for each land cover class by years 2015, 2017, 2021 and 2023 are reported in tables \ref{tabA1}, \ref{tabA2}, \ref{tabA3} and \ref{tabA4}, see Appendix \ref{AppA}. Afterwards, the assignment of pixels was performed during iterative process for each land cover class. The same was applied for all images for the years 2015, 2017, 2021 and 2023 with biannual gap. The classification was performed using the maximum-likelihood discriminant analysis classifier by the ‘i.maxlik’ module \cite{CHOWDHURY2024100800,Lemenkova202323}. {The algorithm used} the signature file{ }calculated in the previous step. {Using} signature file, the land cover types{ were classified }using the maximum-likelihood discriminant, Figure \ref{fig05}.
 
 %----------- subsection ----------->
 \subsection{Accuracy analysis}
  
-The analysis of accuracy (Figure \ref{fig05}) revealed the areas of misclassified pixels in the water areas including the Bab-el-Mandeb Strait. The accuracy assessment showing the probability of the correct assignment of the pixel to the correct class for all the images is presented in Figure \ref{fig05} and calculated with averages for each calculated band. Afterwards, based on the classified ten categories in the images, two of them (water in the sea and water in shelf areas) were merged as a single class ‘water’, and the names of the classes were assigned to each numerical cluster. 
+The analysis of accuracy (Figure \ref{fig06}) revealed the areas of misclassified pixels in the water areas including the Bab-el-Mandeb Strait. The accuracy assessment showing the probability of the correct assignment of the pixel to the correct class for all the images is presented in Figure \ref{fig06} and calculated with averages for each calculated band. Afterwards, based on the classified ten categories in the images, two of them (water in the sea and water in shelf areas) were merged as a single class ‘water’, and the names of the classes were assigned to each numerical cluster. 
 
 After this step, the ML was performed for all the images. The ML step started with generating training pixels from land cover classification on 2015 which were used as seed data. The extraction of training data was done using the ‘r.random’ module{. }Afterwards, {the} training pixels were used for classification on the Landsat images (example for 2023) by training a model using 'r.learn.train' module. {The} GradientBoostingClassifier’ was used as an algorithm to perform ML classification. {Next, the} prediction was performed using the 'r.learn.predict' ML module{ }which applied a fitted estimator form the Python's Scikit-Learn library \cite{pedregosa2018} to raster images in {the} imagery group.{ At the next step, }the computed raster categories were automatically applied to the classification output and checked using the 'r.category' module{.}
 
 %----------- subsection ----------->
 \subsection{Gradient boosting}
 
-{The} images were{ }processed using {gradient boosting ML} algorithm for classification. Digital image processing makes it possible to document the environmental changes through mapping and tracking land cover types identified in the images. The methodology of this project draws on GRASS GIS analysis and scripting techniques used for processing a series of Landsat OLI/TIRS images. Additionally, the topographic map in Figure \ref{fig01} is plotted using Generic Mapping Tools (GMT) using existing methods reported earlier \cite{WRIGHT1998737,Lemenkova202217,9921513,Lemenkova202203,10537274}. Selected GRASS GIS modules support the technical parts of image processing, while others are used for visualization and cartographic representation.
+{The} images were{ }processed using {gradient boosting ML} algorithm for classification. Digital image processing makes it possible to document the environmental changes through mapping and tracking land cover types identified in the images. The methodology of this project draws on GRASS GIS analysis and scripting techniques used for processing a series of Landsat OLI/TIRS images. Additionally, the topographic map in Figure \ref{fig01} is plotted using \hl{GMT by} existing methods reported earlier \cite{WRIGHT1998737,Lemenkova202217,9921513,Lemenkova202203,10537274}. Selected GRASS GIS modules support the technical parts of image processing, while others are used for visualization and cartographic representation.
 
 The algorithm of Gradient boosting classifies the satellite images using the iterative approach which considers previous and next classification steps as loops of classification workflow. {The principle of gradient boosting classifier is as follows. Gradient boosting classifier successively combines several decision trees as more simplified learners to create a strong prediction model using these learners.  By minimizing a loss function embedded in the algorithm, each new learner concentrates on fixing the mistakes committed by the group of prior learners. In this way, accuracy and predictive capacity of the algorithm are increased by this iterative process, which is directed by the gradient of the loss function.}
 
@@ -350,10 +350,10 @@ The class separability matrices were computed for each pair of years (2015-2017 
 %---------------------------->
 \subsection{{Generalisation of FAO Land Cover Map}}
 
-{The Food and Agriculture Organization (FAO) land cover map on Djbouti was generalised from the classes of the Land Cover Classification System (LCCS) according to the technical report on the country. The scheme covering land categories country in 10 classes were used and adopted for the study areas, Table} \ref{tabFAO}. This part of the work has been performed QGIS software, version 3.42.2 'M\"unster'). 
+{The \hl{FAO} land cover map on Djbouti was generalised from the classes of the Land Cover Classification System (LCCS) according to the technical report on the country. The scheme covering land categories country in 10 classes were used and adopted for the study areas, Table} \ref{tabFAO}. This part of the work has been performed QGIS software, version 3.42.2 'M\"unster'). 
 
 \begin{table}[H]
-\caption{{Training pixels for validation for Land Cover Classification System (LCCS) on Djibouti derived from FAO classification scheme of land cover types: spatial distribution of the training ground truth samples}}\label{tabFAO}%
+\caption{{Training pixels for validation for \hl{LCCS} on Djibouti derived from FAO classification scheme of land cover types: spatial distribution of the training ground truth samples}}\label{tabFAO}%
 \small
 \begin{tabularx}{\textwidth}{llll}
 \toprule
@@ -384,14 +384,14 @@ The reclassification was performed since water surfaces in the Bab-el-Mandeb Str
 \section{Results and Discussion}
 
 \subsection{Land cover change analysis}
-{The results of the classified }satellite images are {presented in Figure} \ref{fig04}.
+{The results of the classified }satellite images are {presented in Figure} \ref{fig05}.
 
  \begin{figure}[H]
     \begin{center}
-	\hspace{-35pt}\includegraphics[width=14.0cm]{Fig_04.jpg}
+	\hspace{-35pt}\includegraphics[width=14.0cm]{Fig_05.jpg}
     \end{center}
     \caption{Maps of land cover types based on the classified Landsat 8 OLI/TIRS images on 2015, 2019, 2021 and 2023 covering Djibouti. The approach is done by the Maximum Likelihood discriminant analysis classifier. Background relief: GEBCO. Software: GRASS GIS. Mapping source: author.}
-    \label{fig04}
+    \label{fig05}
 \end{figure}
 
 {The entire study are covered by Landsat images was categorised into 10 distinct land cover classes following FAO classification scheme: 1) Salt plains and hardpans; 2) Barren Land; 3) Water Bodies; 4) Mangroves and aquatic vegetation on regularly flooded (temporarily or permanently) fresh or brackish water; 5) Bushes and Shrubs; 6) Farmland, Shrub crops and Irrigated Trees; 7) Built-up Areas, Artificial Surfaces and Associated Areas; 8) Broadleaved Semi-decidous Forest and Woodland; 9) Mosaic Cropland in Cultivated Areas; 10: Sparse Vegetation in desert areas. Among these classes, the following categories included sub-clusters: Water bodies comprised ponds, areas covered by marshes, rivers and estuaries, and coastal waterways, bushland and shrubland included non-classified types of vegetation such as grasslands, shrubs, rangelands, and savannah; coastal areas of the saline Lake of Assal was categories by salt-tolerant vegetation and mangroves.}
@@ -421,7 +421,7 @@ Xeric shrubland and sparse deciduous forests typical for Djibouti {are} located 
 
 \subsection{Uncertainties and sources of error}
 
-{The overall accuracy (OA) and Kappa coefficient were computed to evaluate the classified map's accuracy by measuring the similarity between the sample points and the correctly and incorrectly categorised classes, Table} \ref{tabKappa}. 
+{The overall accuracy (OA) and Kappa coefficient \hl{(KC)} were computed to evaluate the classified map's accuracy by measuring the similarity between the sample points and the correctly and incorrectly categorised classes, Table} \ref{tabKappa}. 
 
 \begin{table}[H]
 \caption{{Error matrix for validation of gradient boosting ML algorithm for land land cover categories}}
@@ -441,52 +441,52 @@ Xeric shrubland and sparse deciduous forests typical for Djibouti {are} located 
      {9} & 3 & 12 & 2 & 62 & 14 & 6 & 0 & 45 & {1968} & 0 & 2033 \\
      {10} & 14 & 2 & 0 & 16 & 83 & 12 & 0 & 26 & 0 & {2382} & 2535 \\ 
      \midrule 
-     {} & \multicolumn{11}{c}{Overall Accuracy (OA) = 93.4\%} \\ 
+     {} & \multicolumn{11}{c}{\hl{OA} = 93.4\%} \\ 
      \midrule
-     {} &\multicolumn{11}{c}{Kappa Coefficient (KC) = 87.5\%} \\ 
+     {} &\multicolumn{11}{c}{\hl{KC} = 87.5\%} \\ 
     \bottomrule
 \end{tabularx}
 \end{table}
 
  \begin{figure}[H]
     \begin{center}
-	\hspace{-35pt}\includegraphics[width=14.0cm]{Fig_05.jpg}
+	\hspace{-35pt}\includegraphics[width=14.0cm]{Fig_06.jpg}
     \end{center}
     \caption{Accuracy analysis of image classification using reject threshold probability algorithm by chi square test applied to the reclassified images. {Source}: author.}
-    \label{fig05}
+    \label{fig06}
 \end{figure}
 
 {Understanding possible uncertainties underlying the classification schemes in RS data processing is imperative. }Accurate vegetation mapping using satellite image classification is not easy to achieve due to the spectral confusion between different vegetation types and{ }similarity in spectral reflectance of various plant species \cite{1370179,Dobrowski,Moore,8688643}. {Therefore, accuracy assessment is a crucial step to the evaluation process. In this case, the generated map was compared to the ground truth values, represented in this case by sample points taken from FAO based map}. 
 
-{The sources of errors in automatic classification are also caused by the individual patterns of land cover categories on Earth: the }data are not normally distributed in most cases. {Moreover, }the light signature of the deciduous broadleaved plants enables to detect occasionally growing plants in the central regions of the country on the mountainous slopes where precipitation is higher than in semi-desert areas. {Thus}, deciduous shrubland in all the images is attributed to the high backscatter coefficients of this vegetation type and spectral reflection effects. Therefore, validation using the computed Kappa coefficient was done and reported in Table \ref{tabKappa}
+{The sources of errors in automatic classification are also caused by the individual patterns of land cover categories on Earth: the }data are not normally distributed in most cases. {Moreover, }the light signature of the deciduous broadleaved plants enables to detect occasionally growing plants in the central regions of the country on the mountainous slopes where precipitation is higher than in semi-desert areas. {Thus}, deciduous shrubland in all the images is attributed to the high backscatter coefficients of this vegetation type and spectral reflection effects. Therefore, validation using the computed \hl{KC} was done and reported in Table \ref{tabKappa}
 
-{In order to avoid uncertainties in classification caused by such cases,} coastal types of vegetation {were} grouped in the same class with other plants having similar spectral properties (grassland). {The} classification accuracy {was performed in order to evaluate possible sources of errors. To this end, images} were processed using rejection probability test which examines the correctness of the pixel’s classification using {the} chi-square test. This made it possible to evaluate the classification of different types of land {cover types over the} study area using traditional{ }approach of GRASS GIS based on {the }automated clustering, Figure \ref{fig05}. 
+{In order to avoid uncertainties in classification caused by such cases,} coastal types of vegetation {were} grouped in the same class with other plants having similar spectral properties (grassland). {The} classification accuracy {was performed in order to evaluate possible sources of errors. To this end, images} were processed using rejection probability test which examines the correctness of the pixel’s classification using {the} chi-square test. This made it possible to evaluate the classification of different types of land {cover types over the} study area using traditional{ }approach of GRASS GIS based on {the }automated clustering, Figure \ref{fig06}. 
 
 \subsection{Interpretation and data analysis}
 
-Major land cover types of Djibouti {include} xeric shrubland, bare land areas in mountainous deserts, estuary of the Gulf of Tadjoura, cropland areas and sparse vegetation{. Multispectral} bands of the images were analysed and compared using a spectral diagram and spatial analysis. Main land cover maps of Djibouti generated using{ reclassified scenes} and ML-based {analysis} for images{, }Figures \ref{fig06} and \ref{fig07}.
-
- \begin{figure}[H]
-    \begin{center}
-	\hspace{-35pt}\includegraphics[width=14.0cm]{Fig_06.jpg}
-    \end{center}
-    \caption{Reclassified satellite images after reclassification used by the ‘r.reclass’ technique. Images are on periods of 2019, 2021 and 2023 covering Djibouti. Background: GEBCO. Software: GRASS GIS. Mapping source: author.}
-    \label{fig06}
-\end{figure}
-
-The reclassified images are shown in Figure \ref{fig06}. Here, the areas of water are merged into one class which improved the classification. Nevertheless, the neighbouring regions with vegetation types having similar pixels’ reflectance {were misclassified, which required} the ML approach to image processing. A fluctuation in the Assal Lake visible on the images is related to the climate effects and the geothermal activities as also mentioned in previous studies. The study revealed that similar to the fluctuations of saline sabkhas in northern Sahara \cite{Lemenkova202322,Lemenkova202313}, the saline Lake Assal also witnessed slight changes in the water surface and extent of the lacustrine coasts. Nevertheless, the nature of the physiographic variations is more related to the geologic origin \cite{Eldosouky2021}. 
-
-Landscape change detection{ was performed }using comparison between the land cover types detected on the ML-based classified satellite images obtained on different dates. {The} classification of the images is based on automated evaluation of the spectral reflectance values of the individual pixels on the images which are assigned to different land cover classes. {The} comparative analysis of {the} classified images {enabled} to detect landscape changes. The {observed} transitions {of categories} were the loss of intact vegetation areas and fluctuations in the saline lake of Assa{,} gains in vegetation areas in the coastal areas {and} secondary vegetation growth. These transitions correspond to the predominant patterns of vegetation response to climate warming and growth annual temperatures which are visible when comparing central and coastal regions of Djibouti where latter ones have influence from the marine climate especially in the coastal areas of the Gulf of Tadjoura.
+Major land cover types of Djibouti {include} xeric shrubland, bare land areas in mountainous deserts, estuary of the Gulf of Tadjoura, cropland areas and sparse vegetation{. Multispectral} bands of the images were analysed and compared using a spectral diagram and spatial analysis. Main land cover maps of Djibouti generated using{ reclassified scenes} and ML-based {analysis} for images{, }Figures \ref{fig07} and \ref{fig08}.
 
  \begin{figure}[H]
     \begin{center}
 	\hspace{-35pt}\includegraphics[width=14.0cm]{Fig_07.jpg}
     \end{center}
-    \caption{Image classification based on the Gradient boosting classifier algorithm of ML applied for Landsat scenes covering Djibouti on 205, 2019, 2021 and 2023. Background relief: GEBCO. Software: GRASS GIS. Mapping source: author.}
+    \caption{Reclassified satellite images after reclassification used by the ‘r.reclass’ technique. Images are on periods of 2019, 2021 and 2023 covering Djibouti. Background: GEBCO. Software: GRASS GIS. Mapping source: author.}
     \label{fig07}
 \end{figure}
 
-{The} traditional (maximal likelihood) and ML{ }classification maps {were} compared {for} 2015, 2019, 2021 and 2023. Comparing changes on classified images from different dates shows the dynamics of the landscapes over Djibouti from 2015 until 2023. The{ }differences between the{ }land cover or land use types are presented in Figures \ref{fig04}, \ref{fig06} and \ref{fig07} where Figure \ref{fig04} shows the results of the classification made using 'Maximal Likelihood' approach, Figure \ref{fig05} shows the accuracy assessment, Figure \ref{fig06} shows the reclassified maps and Figure \ref{fig07} shows the results of the classification performed using ML approach. 
+The reclassified images are shown in Figure \ref{fig07}. Here, the areas of water are merged into one class which improved the classification. Nevertheless, the neighbouring regions with vegetation types having similar pixels’ reflectance {were misclassified, which required} the ML approach to image processing. A fluctuation in the Assal Lake visible on the images is related to the climate effects and the geothermal activities as also mentioned in previous studies. The study revealed that similar to the fluctuations of saline sabkhas in northern Sahara \cite{Lemenkova202322,Lemenkova202313}, the saline Lake Assal also witnessed slight changes in the water surface and extent of the lacustrine coasts. Nevertheless, the nature of the physiographic variations is more related to the geologic origin \cite{Eldosouky2021}. 
+
+Landscape change detection{ was performed }using comparison between the land cover types detected on the ML-based classified satellite images obtained on different dates. {The} classification of the images is based on automated evaluation of the spectral reflectance values of the individual pixels on the images which are assigned to different land cover classes. {The} comparative analysis of {the} classified images {enabled} to detect landscape changes. The {observed} transitions {of categories} were the loss of intact vegetation areas and fluctuations in the saline lake of Assa{,} gains in vegetation areas in the coastal areas {and} secondary vegetation growth. These transitions correspond to the predominant patterns of vegetation response to climate warming and growth annual temperatures which are visible when comparing central and coastal regions of Djibouti where latter ones have influence from the marine climate especially in the coastal areas of the Gulf of Tadjoura.
+
+ \begin{figure}[H]
+    \begin{center}
+	\hspace{-35pt}\includegraphics[width=14.0cm]{Fig_08.jpg}
+    \end{center}
+    \caption{Image classification based on the Gradient boosting classifier algorithm of ML applied for Landsat scenes covering Djibouti on 205, 2019, 2021 and 2023. Background relief: GEBCO. Software: GRASS GIS. Mapping source: author.}
+    \label{fig08}
+\end{figure}
+
+{The} traditional (maximal likelihood) and ML{ }classification maps {were} compared {for} 2015, 2019, 2021 and 2023. Comparing changes on classified images from different dates shows the dynamics of the landscapes over Djibouti from 2015 until 2023. The{ }differences between the{ }land cover or land use types are presented in Figures \ref{fig05}, \ref{fig07} and \ref{fig08} where Figure \ref{fig05} shows the results of the classification made using 'Maximal Likelihood' approach, Figure \ref{fig06} shows the accuracy assessment, Figure \ref{fig07} shows the reclassified maps and Figure \ref{fig08} shows the results of the classification performed using ML approach. 
 
 Comparison of the classified maps, revealed that{ }natural vegetation, such as herbaceous{ }and mosaic shrubland, croplands and grassland has decreased while the sparse vegetation and bare soil areas typical for desert and semi-desert areas of Djibouti have increased. {Changes} in land cover types in the coastal region of Bab-el-Mandeb and central Djibouti were detected and visualized in the target landscapes over the period from 2015 to 2023. {The} images were compared to different dates to assess landscape dynamics which is defined by evaluation of land cover types through the identification of various land cover patches in different regions of Djibouti.
 
@@ -527,6 +527,7 @@ GEBCO & General Bathymetric Chart of the Oceans  \\
 GIS & Geographic Information System \\
 GMT & Generic Mapping Tools \\
 GRASS GIS & Geographic Resources Analysis Support System GIS \\
+\hl{KC} & \hl{Kappa coefficient} \\
 {LCCS} & {Land Cover Classification System} \\
 Landsat OLI/TIRS & \makecell{Landsat Operational Land Imager (OLI) and\\ Thermal Infrared Sensor (TIRS)} \\
 ML & Machine Learning \\
@@ -534,7 +535,6 @@ ML & Machine Learning \\
 {QGIS} & {Quantum Geographic Information System} \\
 {RF} & {Random Forest} \\
 RS & Remote Sensing \\
-RMSE & Radial Root Mean Square Error \\
 {SVM} & {Support Vector Machines} \\
 TIFF & Tag Image File Format \\
 USGS & United States Geological Survey \\
