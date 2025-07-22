@@ -143,18 +143,18 @@ Università di Bologna, Via Irnerio 42, Emilia-Romagna, 40126 Bologna, %MDPI: Pl
 
 \subsection{Background}
 
-{Satellite images play a pivotal role in environmental monitoring for reconstructing the} the history of landscapes on Earth. Understanding how land cover types change over time gives{ }insight into {the development of }human--environment interactions \cite{Ndehedehe2022,Foli,Speranza}. The main threat of environmental {changes are} linked to climate issues such as desertification, erosion, landscape fragmentation, coastal degradation {and} deforestation. Most of this information {can be discovered on spaceborne images due to the fundamental principle of {remote sensing (RS)}---{differences in spectral reflectance of pixels corresponding to diverse objects on the Earth.} %EE: please check intended meaning is retained.
+{Satellite images play a pivotal role in environmental monitoring for reconstructing the} the history of landscapes on Earth. Understanding how land cover types change over time gives{ }insight into {the development of }human--environment interactions \cite{Ndehedehe2022,Foli,Speranza}. The main threat of environmental {changes are} linked to climate issues such as desertification, erosion, landscape fragmentation, coastal degradation {and} deforestation. Most of this information {can be discovered on spaceborne images due to the fundamental principle of {remote sensing (RS)}---{differences in spectral reflectance of pixels corresponding to diverse objects on the Earth.} %EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
 Using such benefits of RS, many} environmental processes and phenomena can be recognised on satellite images {and Earth Observation (EO) data}, including, for instance, deforestation, soil erosion and desertification. 
 
 The important application of {EO} data for environmental monitoring consists of time series analysis. Such a technique is based on the comparison of changes visible in several multi-temporal images to evaluate trends in vegetation coverage during a given temporal \mbox{period \cite{Springer2023,10281679}}. {This enables the detection of land cover changes and} the identification of {landscape} \mbox{dynamics \cite{su13084092,NATARAJAN2016256}}. EO data processing requires advanced techniques that allow us to find optimal and time-efficient solutions for solving complex geospatial tasks in image analysis. While traditional methods {of Geographical Information Systems (GISs) }have limitations, programming algorithms have significant benefits in the time series analysis of satellite images.
 
-Technologies {of} {image analysis} play an essential role in the development {of environmental monitoring}. {Traditional tools for processing RS data rely on} {GISs} \cite{BORANA2023261,Zhu02012021}. However, {due to the large volume of RS data, the automation of image analysis is needed to effectively perform time series analysis and extract geoinformation}. {Recent {technological} %EE: please check intended meaning is retained.
+Technologies {of} {image analysis} play an essential role in the development {of environmental monitoring}. {Traditional tools for processing RS data rely on} {GISs} \cite{BORANA2023261,Zhu02012021}. However, {due to the large volume of RS data, the automation of image analysis is needed to effectively perform time series analysis and extract geoinformation}. {Recent {technological} %EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
 developments have enabled novel methods for extracting geoinformation from spaceborne data, including} image enhancement \cite{Dyson2024}, image differentiation, rationing or principal component \mbox{analysis \cite{7877513}}. Machine learning (ML) methods have been found to improve the efficiency of {image analysis} through automated algorithms. Existing cases of ML algorithms in cartography and RS tend to be {related} to problems of image processing that are similar to those faced by decision algorithms{. }In each case, ML algorithms {aim to identify} {the best} solution strategy for image classification \cite{FERCHICHI2024122211}.
 
 {Examples of} ML algorithms include{ }Random Forest (RF) \cite{Balha2022,Lemenkova202401}, {Support Vector Machines (SVMs)} \cite{10450641} and {Convolutional Neural Networks (CNNs)} \cite{SUAREZFERNANDEZ2024}. Such approaches are derived from programming and are adapted to{ }image analysis{ }\cite{HUANG2020104580,Arabameri}. Examples of {novel} techniques {in image analysis} include heuristic clustering \cite{8524429,10615674,669164,4666175}, flexible control of \mbox{variables \cite{8999627}}, optimised pattern recognition \cite{9708387,1634653}, ensemble learning \cite{10145147} and objective analysis \cite{8938484,9279780}. 
 
-{Following such applications of ML in Earth and climate sciences, }this study {reports the case of a novel independent reclassification scheme for image analysis at the pixel level using} ML {coupled with} %EE: please check intended meaning is retained.
-Geographic Resources Analysis Support System (GRASS) GIS and gradient boosting algorithm. {Its advantages include the optimisation approach, which} considers previous iterative cycles of image classification for the generation of {new} %EE: please check intended meaning is retained.
+{Following such applications of ML in Earth and climate sciences, }this study {reports the case of a novel independent reclassification scheme for image analysis at the pixel level using} ML {coupled with} %EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
+Geographic Resources Analysis Support System (GRASS) GIS and gradient boosting algorithm. {Its advantages include the optimisation approach, which} considers previous iterative cycles of image classification for the generation of {new} %EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
 models and the narrowing of pixel assignment options to various land cover classes. 
 
 
@@ -170,8 +170,8 @@ is an advanced scripting cartographic and RS software with} a powerful computati
 	\item To assess the accuracy of{ }classification for vegetation mapping in{ }central and coastal zones {around} Lake Assal. 
 \end{enumerate}
 
-{The rest of this manuscript is organised as follows. Section \ref{sec1} presents the introduction with a related literature review and identifies the objectives and goals. {Section \ref{sec2} describes the study area, focusing on environmental and climate--hydrological settings that {influence} landscape types.} %EE: please check intended meaning is retained.
-Section \ref{sec3} introduces the materials and numerical methods used in this study, {including the dataset and workflow, which are described as the methodological approach.} %EE: please check intended meaning is retained.
+{The rest of this manuscript is organised as follows. Section \ref{sec1} presents the introduction with a related literature review and identifies the objectives and goals. {Section \ref{sec2} describes the study area, focusing on environmental and climate--hydrological settings that {influence} landscape types.} %EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
+Section \ref{sec3} introduces the materials and numerical methods used in this study, {including the dataset and workflow, which are described as the methodological approach.} %EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
 Major technical procedures are described in the subsections that follow. In Section \ref{sec4}, we present and discuss the results with cases of land cover changes, comment on uncertainties, and provide and interpret a series of maps. Finally, Section \ref{sec5} concludes the manuscript, summarising the findings and providing recommendations for future studies.}
 
 %----------- section ----------->
@@ -179,43 +179,36 @@ Major technical procedures are described in the subsections that follow. In Sect
 
 This study area is located in Djibouti and surrounding coastal areas in the Gulf of Tadjoura, Bab-el-Mandeb Strait{ }(Figure \ref{fig01}). Situated in the region of the Horn of Africa and surrounded by waters of the southern Red Sea, Djibouti is a strategic point with geo-maritime importance{ }\cite{McCabe02102019,Lawale02102023}. Djibouti is one of the hottest and driest places on {Earth} with many issues related to climate and weather processes \cite{Verdugo2016}. {The} thermal crater saline lake, Lake Assal, {is located in this area, which is} the lowest point on land in East Africa with extreme levels of evaporation. {The topography affects }temperature and precipitation, {which }vary according to the elevation and differ in coastal and mountainous regions \cite{Haile}. 
 
-
-
 This region experiences {fluctuations} in salinity and water levels {due to} seasonal and annual changes in temperature and precipitation. {Dominating landscapes are represented by }dry mountain vegetation {typical of arid climates}. The distribution and genera of flora and fauna are{ }controlled by low precipitation and high temperatures in semi-desert and desert environments \cite{GEBREMESKELHAILE2020135299,Lemenkova202221,AGHAKOUCHAK2015127}. For example, the 2011 drought in East Africa {affected rain-fed agriculture in} Djibouti, {which led to a regional }famine \cite{AGUTU2017287,DERCOLE2024104264,Dinku10112011}. Drought-induced crises endanger long-term investments and development,{ with} catastrophic human costs and effects on vulnerable regions of the country \cite{MISHRA2010202,FAVA202144,BRAVAR1991281}.
 
-The drought-prone regions of{ }Djibouti {have experienced} strong effects from climate change, {including} fluctuations in the hydrological regime of thermal lakes. The arid climate{ has }triggered environmental problems{; for example,} it has desiccated and abandoned{ }agricultural lands, and salinated and blocked water sources due to sea level rise {and} flash floods \cite{Schulman02012019,CARRAO2016108}. Soil erosion and land degradation vary {across} topographically diverse landscapes, {reflecting the prevailing climatic conditions.} %EE: please check intended meaning is retained. 
+The drought-prone regions of{ }Djibouti {have experienced} strong effects from climate change, {including} fluctuations in the hydrological regime of thermal lakes. The arid climate{ has }triggered environmental problems{; for example,} it has desiccated and abandoned{ }agricultural lands, and salinated and blocked water sources due to sea level rise {and} flash floods \cite{Schulman02012019,CARRAO2016108}. Soil erosion and land degradation vary {across} topographically diverse landscapes, {reflecting the prevailing climatic conditions.} %EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
 \cite{FENTA2020135016,Knight2022}. Moreover, environmental pollution has been reported {along the coasts of the} Gulf of Tadjoura \cite{BOLDROCCHI2018812,BOLDROCCHI2018812,GAJDZIK2021112244}. 
 
-
-
-{The} surroundings of the Horn of Africa are notable for climate--hydrological fluctuations which cause land cover changes \cite{Billi2022,SEKA2024141552}. The coastal region located in the Bab-el-Mandeb region includes diverse types of xeric grasslands and shrubland typical for arid ecoregions (Figure \ref{fig02}). {This region consists} of various land cover classes typical for semi-desert areas: dry shrub steppe and grassland, including species of \emph{Vachellia tortilis}, \emph{Vachellia nubica}, and \emph{Balanites aegyptiaca}. Many scarce vegetation spots include scattered trees or shrubs on the sandy plains of bare lands and semi-deserts.  
-
 \begin{figure}[H]
-   
-	\includegraphics[width=12.0cm]{Fig_01.jpg}
-  
+	\includegraphics[width=13.0cm]{Fig_01.jpg}
     \caption{Topographic %MDPI: Please note that changes to the position/size of figures or tables may occur during the production stage. % Author's reply: yes, I confirm and agree.
  map of Djibouti with indicated study area (yellow rotated square) which shows the location of the Landsat images. Mapping software: Generic Mapping Tools (GMT) version 6.4.0. Data source: General Bathymetric Chart of the Oceans (GEBCO). Map source: Author.}
     \label{fig01}
 \end{figure}
 
-\vspace{-5pt}
-\begin{figure}[H]
-   
-	\includegraphics[width=13.5cm]{Fig_02.jpg}
-  
-    \caption{\hl{Map} %MDPI: Please confirm whether the overlapping/incomplete content in this figure affects scientific understanding and if it does, please revise it. The contents of this figure are not legible. Please replace the image with one of a sufficiently high resolution (min. 1000 pixels width/height, or a resolution of 300 dpi or higher). Please change the hyphen (-) between numbers into an en dash (−, “U+2013”), e.g., “2019-2022” should be “2019–2022” and “0-9” should be “0–9”.
- of land cover types over Djibouti, showing the distribution of major vegetation and land cover types. Software: {Quantum Geographic Information System (QGIS)}. Data source: Food and Agriculture Organisation (FAO). Map source: Author.}
-    \label{fig02}
-\end{figure}
+{The} surroundings of the Horn of Africa are notable for climate--hydrological fluctuations which cause land cover changes \cite{Billi2022,SEKA2024141552}. The coastal region located in the Bab-el-Mandeb region includes diverse types of xeric grasslands and shrubland typical for arid ecoregions (Figure \ref{fig02}). {This region consists} of various land cover classes typical for semi-desert areas: dry shrub steppe and grassland, including species of \emph{Vachellia tortilis}, \emph{Vachellia nubica}, and \emph{Balanites aegyptiaca}. Many scarce vegetation spots include scattered trees or shrubs on the sandy plains of bare lands and semi-deserts.  
 
-The eastern strip along the Red Sea coast is part of the Eritrean coastal desert \cite{TESFAI2021104327}. It includes vegetation along the muddy wadi mouths in diverse habitats \cite{MEDIN201526}, \mbox{grasslands \cite{ALI20231,IDOWU2020e00402}}, and secondary growth areas in the urban areas. The floodplains along the wadi rivers include scarce vegetation typical for semi-desert ecosystems. Xeric vegetation, farmland, mangroves along the coasts of the  Red Sea and valleys of wadi \cite{BLANCOSACRISTAN2022157098,BEYIN2024100247}, coral reefs along the coasts \cite{Klaus2015,COWBURN2019182,GAPPER2024e38249} and urban areas {collectively make up the region's landscape}. %EE: please check intended meaning is retained.
-{ }Djibouti is one of the most{ seismically unstable }zones of Africa {with high} tectonic--magmatic activities \cite{Chandrasekharam,MOUSSA2023104765,AYELE2024105236,JALLUDIN1994237} due to the closeness of the Afar Triple Junction \cite{RIME2023104519,GIDAFIE2024102037,DARRAH201316}. The thermal regime around the Red Sea{ }is explained{ by its structural connection to the active{ }zone of the East African Rift} %EE: please check intended meaning is retained.
+
+
+The eastern strip along the Red Sea coast is part of the Eritrean coastal desert \cite{TESFAI2021104327}. It includes vegetation along the muddy wadi mouths in diverse habitats \cite{MEDIN201526}, \mbox{grasslands \cite{ALI20231,IDOWU2020e00402}}, and secondary growth areas in the urban areas. The floodplains along the wadi rivers include scarce vegetation typical for semi-desert ecosystems. Xeric vegetation, farmland, mangroves along the coasts of the  Red Sea and valleys of wadi \cite{BLANCOSACRISTAN2022157098,BEYIN2024100247}, coral reefs along the coasts \cite{Klaus2015,COWBURN2019182,GAPPER2024e38249} and urban areas {collectively make up the region's landscape}. %EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
+{ }Djibouti is one of the most{ seismically unstable }zones of Africa {with high} tectonic--magmatic activities \cite{Chandrasekharam,MOUSSA2023104765,AYELE2024105236,JALLUDIN1994237} due to the closeness of the Afar Triple Junction \cite{RIME2023104519,GIDAFIE2024102037,DARRAH201316}. The thermal regime around the Red Sea{ }is explained{ by its structural connection to the active{ }zone of the East African Rift} %EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
 \cite{Varet2022,Lemenkova202206,PINZUTI2010169,Lemenkova202205,MESHESHA2021e08634}. 
 
-{Such} complex geological setting and arid environment {have resulted in the} deficit of water {and favoured} the distribution of thermal springs with high salinity, %{of the brines} 
-located in three regions---Lake Assal, Lake Hanle and Lake Abhe \cite{MOLOGNI2021107896,DAMORE1998197}. The craton origin of Lake{ Assal }is related to the Afar Triple Junction \cite{HOUSSEIN2010220,AWALEH2024102894,Houssein02112014}. The {geochemical composition of the} Assal Rift {includes }evaporitic halite deposits \cite{CASTANIER1992811,GASSE198967}. Its location in the arid zone with strong evaporation and no riverine input contributed to the  lake's increase in salinity, with a high brine concentration above 100 g/L \cite{DEKOV2021120126}. {Fluctuations of this concentration} %EE: please check intended meaning is retained.
-are related to evaporation, the hot climate and geothermal processes \cite{ZAN1990561}. 
+{Such} complex geological setting and arid environment {have resulted in the} deficit of water {and favoured} the distribution of thermal springs with high salinity, %{of the brines} % Author's reply: yes, confirm.
+located in three regions---Lake Assal, Lake Hanle and Lake Abhe \cite{MOLOGNI2021107896,DAMORE1998197}. The craton origin of Lake{ Assal }is related to the Afar Triple Junction \cite{HOUSSEIN2010220,AWALEH2024102894,Houssein02112014}. The {geochemical composition of the} Assal Rift {includes }evaporitic halite deposits \cite{CASTANIER1992811,GASSE198967}. Its location in the arid zone with strong evaporation and no riverine input contributed to the  lake's increase in salinity, with a high brine concentration above 100 g/L \cite{DEKOV2021120126}. {Fluctuations of this concentration} %EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
+are related to evaporation, the hot climate and geothermal processes \cite{ZAN1990561}.
+
+%\vspace{-5pt}
+\begin{figure}[H]
+	\includegraphics[width=14.0cm]{Fig_02.jpg}
+    \caption{Map %MDPI: Please confirm whether the overlapping/incomplete content in this figure affects scientific understanding and if it does, please revise it. The contents of this figure are not legible. Please replace the image with one of a sufficiently high resolution (min. 1000 pixels width/height, or a resolution of 300 dpi or higher). Please change the hyphen (-) between numbers into an en dash (−, “U+2013”), e.g., “2019-2022” should be “2019–2022” and “0-9” should be “0–9”. % Author's reply: corrected; Figure 2 is redone with increased font and corrected hyphen into dash. 
+ of land cover types over Djibouti, showing the distribution of major vegetation and land cover types. Software: {Quantum Geographic Information System (QGIS)}. Data source: Food and Agriculture Organisation (FAO). Map source: Author.}\label{fig02}
+\end{figure}
 
 %----------- section ----------->
 
@@ -226,13 +219,13 @@ Our methodology presents a case of image reclassification and analysis using {ML
 %----------- subsection ----------->
 \subsection{Data}
 
-The data used in this study include {four images from the }Landsat 8--9  Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS): {the training image from 2015, {and images with biannual intervals from }2019, 2021 and 2023 (Figure \ref{fig03}). }%EE: please check intended meaning is retained.
+The data used in this study include {four images from the }Landsat 8--9  Operational Land Imager (OLI) and Thermal Infrared Sensor (TIRS): {the training image from 2015, {and images with biannual intervals from }2019, 2021 and 2023 (Figure \ref{fig03}). }%EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
 
 
 
 The {Landsat} images were selected as the data source due to {their} quality and {reliability}\cite{GONG2024149,ALLU2025127478,CHANUWANWIJESINGHE2024112681}. {Earlier studies reported the effective} use of {the} RS data {in environmental studies which prove their utility and value }\cite{WANG2023311,DAREM2023341,FAROOQ2024101168,AFUYE2024103262,CHUGHTAI2021100482,VELASTEGUIMONTOYA2023100659,FARHAN2024103689}. {Nowadays}, satellite images are {excellent} sources of {geoinformation} {for mapping} arid regions \cite{AMAZIRH2023104586,FERCHICHI2024122211,MEKONNEN20251}. {Spaceborne data are successfully} used {in} the analysis of land cover change and deforestation in tropical forests, and{ for reporting }landscape {dynamics} \cite{PARRAPAITAN2024103796,ZHAO2024506,NZABARINDA2025114849,MONTEROBOTEY2024e03068}. {The} importance of Landsat {data} for environmental {research} has been described earlier \cite{AKSOY20221072,NESARI2024101989,KUMAR2022100578}.
 
-In this study, four Landsat images were taken on the following dates: (1) 02 July 2015; (2) 23 July 2017; (3) 19 August 2021; and (4) 16 July 2023. The metadata{ are }summarised in Table \ref{tab01}. The cloudiness percentage is less than 10\% for all the images. The{ }technical parameters of {the} scenes are provided in Table \ref{tab02}. Common data for all four images are as follows: Datum and Ellipsoid: {{World Geodetic System 1984 (WGS84)}; Product Map Projection L1: Universal Transverse Mercator (UTM) zone 38 (for Djibouti);  Worldwide Reference System (WRS): Path--166, Row--52; Landsat Collection Number: 2; Category: T1; Station Identifier: LGN; and Sensor Identifier: OLI/TIRS. }%EE: please check intended meaning is retained.
+In this study, four Landsat images were taken on the following dates: (1) 02 July 2015; (2) 23 July 2017; (3) 19 August 2021; and (4) 16 July 2023. The metadata{ are }summarised in Table \ref{tab01}. The cloudiness percentage is less than 10\% for all the images. The{ }technical parameters of {the} scenes are provided in Table \ref{tab02}. Common data for all four images are as follows: Datum and Ellipsoid: {{World Geodetic System 1984 (WGS84)}; Product Map Projection L1: Universal Transverse Mercator (UTM) zone 38 (for Djibouti);  Worldwide Reference System (WRS): Path--166, Row--52; Landsat Collection Number: 2; Category: T1; Station Identifier: LGN; and Sensor Identifier: OLI/TIRS. }%EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
 The images were taken during day time in nadir with a roll angle of 1\degree  for the 2015 image and 0\degree for the images from 2017, 2021 and 2023. 
 
 \begin{figure}[H]
@@ -261,8 +254,8 @@ The images were taken during day time in nadir with a roll angle of 1\degree  fo
 \end{tabularx}
 \end{table} 
 
-The{ image quality score was 9 }%EE: please check intended meaning is retained.
-for all scenes, according to the Landsat specifications. The remaining various metadata for each scene are summarised in Table \ref{tab02}. The geographic characteristics of the images are referenced in Table \ref{tab03}. {The Landsat Scene Identifiers (IDs) are \mbox{provided below.} %EE: please check intended meaning is retained.
+The{ image quality score was 9 }%EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
+for all scenes, according to the Landsat specifications. The remaining various metadata for each scene are summarised in Table \ref{tab02}. The geographic characteristics of the images are referenced in Table \ref{tab03}. {The Landsat Scene Identifiers (IDs) are \mbox{provided below.} %EE: please check intended meaning is retained. % Author's reply: yes, intended meaning is retained.
 }
 
 
@@ -362,17 +355,17 @@ The Landsat 8--9 OLI/TIRS images were geometrically rectified according to EPSG 
 %----------- subsection ----------->
 \subsection{Clustering}
 
-The clustering was performed by the `i.cluster' module of GRASS GIS, which generates a signature file and reports results using the k-means clustering algorithm, as explained in previous studies \cite{5930121,10430357,Lemenkova202315,5739741}.{ }{Signature file determines the categories (classes) of land cover types{ using the analysis of spectral reflectance of the pixels} and contains{ }clusters and covariance matrices for each image.} %EE: Please check intended meaning is retained.­
-{The initial means for each class before data processing reported in Appendix} \ref{AppA} {indicate {the starting seed values} %EE: Please check intended meaning is retained.­
+The clustering was performed by the `i.cluster' module of GRASS GIS, which generates a signature file and reports results using the k-means clustering algorithm, as explained in previous studies \cite{5930121,10430357,Lemenkova202315,5739741}.{ }{Signature file determines the categories (classes) of land cover types{ using the analysis of spectral reflectance of the pixels} and contains{ }clusters and covariance matrices for each image.} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
+{The initial means for each class before data processing reported in Appendix} \ref{AppA} {indicate {the starting seed values} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
 of the multispectral band before iteration is assigned according to the signature files. The means are then calculated  during the `i.cluster' procedure and recalculated following the principles of maximal class separation (the contrast between the classes) and minimal class size (the details of classification with respect to a spatial resolution of 30 m). The table in Appendix} \ref{AppA} {reports such values for each of the 10 classes and 7 multispectral bands of Landsat, starting from 1---`Coastal aerosol' to 7---`SWIR-2'.} 
 
-{The} initial {mean} %EE: Please check intended meaning is retained.­
-values for each land cover class for the years 2015, 2017, 2021 and 2023 are reported in Tables \ref{tabA1}--\ref{tabA4}; see Appendix \ref{AppA}. Afterwards, the assignment of pixels was performed {iteratively}  %EE: Please check intended meaning is retained.­
+{The} initial {mean} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
+values for each land cover class for the years 2015, 2017, 2021 and 2023 are reported in Tables \ref{tabA1}--\ref{tabA4}; see Appendix \ref{AppA}. Afterwards, the assignment of pixels was performed {iteratively}  %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
 for each land cover class. The same was applied for all images for the years 2015, 2017, 2021 and 2023 with a biannual gap. The classification was performed using the maximum-likelihood discriminant analysis classifier by the `i.maxlik' module \cite{CHOWDHURY2024100800,Lemenkova202323}. {The algorithm used} the signature file{ }calculated in the previous step. {Using} the signature file, the land cover types{ were classified }using maximum-likelihood discriminant analysis (Figure \ref{fig05}).
 
  \begin{figure}[H]
  
-	\includegraphics[width=13.50cm]{Fig_05.jpg}
+	\includegraphics[width=13.5cm]{Fig_05.jpg}
   
     \caption{Maps %MDPI: 1. Please change the hyphen (-) into a minus sign ($-$, "U+2212"). e.g., "-1" should be "$-$1". 2. Please confirm whether the overlapping/incomplete content in this figure affects scientific understanding and if it does, please revise it. % Author's reply: I revised hyphen in the figure into minus sign. I confirm that the content in this figure is correct and does not affects scientific understanding.
  of land cover types based on the classified Landsat 8--9 OLI/TIRS images from 2015, 2019, 2021 and 2023 covering Djibouti. The approach involved the maximum-likelihood discriminant analysis classifier. Background relief: GEBCO. Software: GRASS GIS. Mapping source: Author.}
@@ -388,12 +381,8 @@ were merged as a single class `water', and the names of the classes were assigne
 
 \vspace{+5pt}
  \begin{figure}[H]
-  
-	
-\begin{adjustwidth}{-\extralength}{0cm}
-\centering
-\includegraphics[width=15.0cm]{Fig_06.jpg}
-\end{adjustwidth}
+
+\includegraphics[width=13.5cm]{Fig_06.jpg}
   
     \caption{Accuracy %MDPI: We revised the hyphen in the figure into minus sign. Please confirm. Please confirm whether the overlapping/incomplete content in this figure affects scientific understanding and if it does, please revise it. % Author's reply: yes, I confirm the revised hyphen in the figure into minus sign. I confirm that the content in this figure is correct and does not affects scientific understanding.
  analysis of image classification using reject threshold probability algorithm and the chi-squared test, which was applied to the reclassified images. {Source}: Author.}
@@ -409,7 +398,7 @@ After this step, ML was applied to all the images. The ML step started with the 
 
 {The core idea is that} the algorithm finds the best possible next model when combined with previous {ones}. In this way, it minimises the overall prediction error. The advantage of such an approach is that it {improves the accuracy of classification} through the convergence of decision{ }cycles and assigns cells that constitute the mosaic of pixels on{ }a raster image to the defined {categories}. When several {images are processed as a time series}, this enables us to effectively monitor landscape dynamics and detect{ changes}. 
 
-The class separability matrices were computed for each pair of years (2015--2017 and 2021--2023) and show the distinguishability between classes (Figures \ref{figSep1} and \ref{figSep2}). The iterative cycles of image classification are summarised in  Appendix \ref{AppB} in four statistical tables for each of the study periods, respectively. {They report the pixels' distribution by categories of land cover classes for each year: 2015, 2017, 2021 and 2023. The values indicate percent convergence,{ which shows at which values the cluster means of land cover categories become stable during iterative classification}. %EE: Please check intended meaning is retained.­
+The class separability matrices were computed for each pair of years (2015--2017 and 2021--2023) and show the distinguishability between classes (Figures \ref{figSep1} and \ref{figSep2}). The iterative cycles of image classification are summarised in  Appendix \ref{AppB} in four statistical tables for each of the study periods, respectively. {They report the pixels' distribution by categories of land cover classes for each year: 2015, 2017, 2021 and 2023. The values indicate percent convergence,{ which shows at which values the cluster means of land cover categories become stable during iterative classification}. %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
 Hence, iterative processes aim to achieve the maximal percentage of pixels that no longer move from cluster to cluster during iteration and reach the best possible values.} 
 
 %----------- subsection ----------->
@@ -420,14 +409,14 @@ Hence, iterative processes aim to achieve the maximal percentage of pixels that 
 %---------------------------->
 \subsection{{Generalisation of FAO Land Cover Map}}
 
-{The {FAO} land cover map of Djibouti was generalised from the classes of the Land Cover Classification System (LCCS) according to a technical report on the country. {The scheme covering land {cover} categories {comprising} 10 classes was used and adopted for the study areas within the country} %EE: Please check intended meaning is retained.­
+{The {FAO} land cover map of Djibouti was generalised from the classes of the Land Cover Classification System (LCCS) according to a technical report on the country. {The scheme covering land {cover} categories {comprising} 10 classes was used and adopted for the study areas within the country} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
 (Table} \ref{tabFAO}). This part of the work was performed using QGIS software, version \mbox{3.42.2 ‘M\"unster'}. The QGIS was initially developed by G. Sherman and now a project of the Open Source Geospatial Foundation. 
 
 {The reclassified }image was generated for each year using the ‘r.reclass’ module of GRASS GIS {and} ‘echo’ Unix command.{ }The raster map was reclassified based on the category values, and new raster maps for the years 2015, 2019, 2021 and 2023 were {generated}. The category values of the reclassified maps are based on an {iteration} of the categories using the information generated in ‘landusereclass.txt' file. {These} categories were {controlled} using the ‘r.category' module. The maps were{ }visualised using{ }modules {`d.mon' and ‘g.region'}.  The color palette was {selected from the} color tables. {Afterwards, the maps} were displayed using a combination of ‘d.rast’ and ‘d.vect’ {modules}. {Finally, }a cartographic grid was added {along with} the legends by the ‘d.legend’ module.
 
 
 \begin{table}[H]
-\caption{{Training pixels for validation {under} {LCCS} {for} %EE: Please check intended meaning is retained.­
+\caption{{Training pixels for validation {under} {LCCS} {for} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
 Djibouti, derived from FAO classification scheme of land cover types: spatial distribution of the training ground truth samples.}}\label{tabFAO}%
 \small
 \begin{tabularx}{\textwidth}{llll}
@@ -441,7 +430,7 @@ Djibouti, derived from FAO classification scheme of land cover types: spatial di
         4 & \makecell{Mangroves and Aquatic Vegetation on Regularly Flooded \\(Temporarily or Permanently) Fresh or Brakish Water} & \makecell{41,653%MDPI: Please check if need use commas to separate thousands for numbers with five or more digits (not four digits) in this table, e.g., "10000" should be "10,000". Please check and revise all if needed % Author's reply:  corrected to separated thousands.
 -R1,R2 // 41,739-R1 \\ 41,521-R1,R2 // 41,597-R1,R2}  \\ \midrule
         5 & Bushes and Shrubs & 11,490 // 11,494 \\ \midrule
-        6 & \makecell{Farmland, {Shrubs} %EE: Please check intended meaning is retained.­
+        6 & \makecell{Farmland, {Shrubs} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
         	and \\Irrigated Trees} & \makecell{11,499 // 11,500 // 30,001, \\11,491, 11,495}  \\ \midrule
         7 & Built-up Areas, Artificial Surfaces and Associated Areas & 0,010  \\ \midrule
         8 & Broadleaved Semi-deciduous Forest // Woodland & \makecell{21,496 // 21,497--15,048 // \\21,496--12,134 // 21,497-12,940} \\  \midrule
@@ -452,8 +441,8 @@ Djibouti, derived from FAO classification scheme of land cover types: spatial di
 \noindent{\footnotesize{Information source: FAO (land use statistics).}}
 \end{table}
 
-The reclassification was performed since water surfaces in the Bab-el-Mandeb Strait and southern Red Sea had different colours. Nevertheless, they belong to the same class of water. The differences in the coastal regions were smooth at the time of image acquisition and appear as dark colours in all images. {With each iteration, the values of the {means shift to a higher} %EE: Please check intended meaning is retained.­
-percentage of pixels within each cluster. This is illustrated in the class separability matrix, which shows the distinction between the categories} (\mbox{Figures \ref{figSep1} {and } \ref{figSep2}}; Appendix \ref{AppC}). {As means never become completely static, a \% convergence and a maximum number of iterations are defined to finalise the process of reclassification before the maximum number of cycles {is reached}. %EE: Please check intended meaning is retained.­
+The reclassification was performed since water surfaces in the Bab-el-Mandeb Strait and southern Red Sea had different colours. Nevertheless, they belong to the same class of water. The differences in the coastal regions were smooth at the time of image acquisition and appear as dark colours in all images. {With each iteration, the values of the {means shift to a higher} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
+percentage of pixels within each cluster. This is illustrated in the class separability matrix, which shows the distinction between the categories} (\mbox{Figures \ref{figSep1} {and } \ref{figSep2}}; Appendix \ref{AppC}). {As means never become completely static, a \% convergence and a maximum number of iterations are defined to finalise the process of reclassification before the maximum number of cycles {is reached}. %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
 The final values of the computed class means for each land category are reported in Appendix} \ref{AppD}. {Once the maximum number of reclassification cycles is reached, the optimal \% convergence is achieved through the increased number of iterations during the ‘i.cluster' procedure. Here, the number of cycles depends on the complexity of the terrain and land cover patterns.} 
 
 %\pagebreak
@@ -461,14 +450,14 @@ The final values of the computed class means for each land category are reported
 \section{Results and Discussion}\label{sec4}
 
 \subsection{Land Cover Change Analysis}
-{The results of the classified }satellite images are {presented in Figure} \ref{fig05}. The{ }study {area} was categorised into 10 distinct land cover classes following the FAO classification scheme: \mbox{(1) salt} plains and hardpans; (2) barren land; (3) water bodies; (4) mangroves and aquatic vegetation on regularly flooded (temporarily or permanently) fresh or brackish water; (5) bushes and shrubs; (6) farmland, {shrubs} %EE: Please check intended meaning is retained.­
+{The results of the classified }satellite images are {presented in Figure} \ref{fig05}. The{ }study {area} was categorised into 10 distinct land cover classes following the FAO classification scheme: \mbox{(1) salt} plains and hardpans; (2) barren land; (3) water bodies; (4) mangroves and aquatic vegetation on regularly flooded (temporarily or permanently) fresh or brackish water; (5) bushes and shrubs; (6) farmland, {shrubs} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
 and irrigated trees; (7) built-up areas, artificial surfaces and associated areas; (8) broadleaved semi-deciduous forest and woodland; (9) mosaic cropland in cultivated areas; and (10) sparse vegetation in desert areas. Among these classes, the following categories included sub-clusters: water bodies comprise ponds, areas covered by marshes, rivers, estuaries, and coastal waterways; bushland and shrubland include non-classified types of vegetation such as grasslands, shrubs, rangelands, and savannah; and coastal areas surrounding Lake Assal are categorised by salt-tolerant vegetation and mangroves.}
 
 
 
-{{Over an estimated period of a decade, from 2013 to 2023,} %EE: Please check intended meaning is retained.­
-image analysis revealed certain changes in land cover types across the study area of Djibouti. Thus, it is noteworthy that the amount of mangroves along the coastal areas decreased slightly, shrinking by 0.35 km\textsuperscript{2} from 6.28 km\textsuperscript{2} to 5.93 km\textsuperscript{2} during this period. Furthermore, a large area of 1392 km\textsuperscript{2} that had previously been covered by bushes and shrubland was converted into other land use categories, resulting in a decrease in coverage from 1194 km\textsuperscript{2}. As a result of this reduction, the percentage of bush cover decreased {to} %EE: Please check intended meaning is retained.­
-15\%. Over the course of the studied period, {both salt-covered areas around Lake Assal and croplands} %EE: Please check intended meaning is retained.­
+{{Over an estimated period of a decade, from 2013 to 2023,} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
+image analysis revealed certain changes in land cover types across the study area of Djibouti. Thus, it is noteworthy that the amount of mangroves along the coastal areas decreased slightly, shrinking by 0.35 km\textsuperscript{2} from 6.28 km\textsuperscript{2} to 5.93 km\textsuperscript{2} during this period. Furthermore, a large area of 1392 km\textsuperscript{2} that had previously been covered by bushes and shrubland was converted into other land use categories, resulting in a decrease in coverage from 1194 km\textsuperscript{2}. As a result of this reduction, the percentage of bush cover decreased {to} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
+15\%. Over the course of the studied period, {both salt-covered areas around Lake Assal and croplands} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
 showed downward tendencies, with farmland areas falling from 3.21 km\textsuperscript{2} to 2.75 km\textsuperscript{2} and salt coverage from 17 km\textsuperscript{2} to 16.04 km\textsuperscript{2}.}
 
 Additionally, saline waters mixed with the fresh waters of the estuaries of the Gulf of Tadjoura have a lighter coloration than those of the open sea. Vegetation types such as mosaic croplands, sparse vegetation, xeric shrubland and grassland or bare soil areas are detected and indicated on the maps. Broadleaved deciduous vegetation is relatively scarce in the study area. The regions of shrub, and flooded brackish water areas are mostly occupied by mangrove forests, which have stronger spectral signals and appear as various shades of colors. The computational results of the pixels by land cover classes are summarised in Table \ref{tab04}.
@@ -591,7 +580,7 @@ Afar Triple Junction. {Furthermore, to continue this study, future works can ada
 
 \informedconsent{Not applicable.}
 
-\dataavailability{The data are available in the GitHub repository: %MDPI: Please add the access date (format: Date Month Year), e.g., accessed on 1 January 2020.
+\dataavailability{The data are available in the GitHub repository: %MDPI: Please add the access date (format: Date Month Year), e.g., accessed on 1 January 2020. % Author's reply: corrected.
 \url{https://github.com/paulinelemenkova/GRASS\_ML\_Djibouti}, accessed on 12 June 2025.} 
 
 \acknowledgments{The author thanks the reviewers for reading and reviewing of this manuscript.}
@@ -793,7 +782,7 @@ WRS & Worldwide Reference System \\
 \begin{tabularx}{\textwidth}{p{1.6cm}p{1.8cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.9cm}}
   \toprule
   \multirow{2}{*}{\textbf{2017}} & \multicolumn{10}{c}{\textbf{Pixel Distribution by Categories of Land Cover Classes: 2017}} \\
-     & \textbf{Stable Points} %EE: Please check intended meaning is retained.­
+     & \textbf{Stable Points} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
      & \textbf{1} & \textbf{2} &  \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} &\textbf{ 9} & \textbf{10} \\
     \midrule
     Iteration 1 & 91.34\% & 1698    &    165   &      76    &    574    &   1121 &
@@ -827,7 +816,7 @@ WRS & Worldwide Reference System \\
 \begin{tabularx}{\textwidth}{p{1.6cm}p{1.8cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.9cm}}
   \toprule
   \multirow{2}{*}{2021} & \multicolumn{10}{c}{\textbf{Pixels' Distribution by Categories of Land Cover Classes: 2021}} \\
-     & \textbf{Stable Points} %EE: Please check intended meaning is retained.­
+     & \textbf{Stable Points} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
      & \textbf{1} & \textbf{2} &  \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} &\textbf{ 8} & \textbf{9} & \textbf{10} \\
     \midrule
     Iteration 1 & 91.92\% & 1682    &    142    &    128    &    663    &   1062&
@@ -861,7 +850,7 @@ WRS & Worldwide Reference System \\
 \begin{tabularx}{\textwidth}{p{1.6cm}p{1.8cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.55cm}p{0.9cm}}
   \toprule
   \multirow{2}{*}{\textbf{2023}} & \multicolumn{10}{c}{\textbf{Pixel Distribution by Categories of Land Cover classes: 2023}} \\
-     & \textbf{Stable Points} %EE: Please check intended meaning is retained.­
+     & \textbf{Stable Points} %EE: Please check intended meaning is retained.­ % Author's reply: yes, intended meaning is retained.
      & \textbf{1} & \textbf{2} &  \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} &\textbf{ 9} & \textbf{10} \\
     \midrule
     Iteration 1 & 91.95\% & 1665    &     98    &     82    &    574   &   1139 &
